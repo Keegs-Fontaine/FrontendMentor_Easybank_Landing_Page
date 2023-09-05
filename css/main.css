@@ -16,6 +16,7 @@ h6 {
 
 a {
   font: inherit;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -31,6 +32,43 @@ button {
 html {
   font-size: 1.125rem;
   font-family: "Public Sans", sans-serif;
+}
+
+.main-header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.main-header__list {
+  width: 85vw;
+  padding-block: 0.5rem;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  text-align: center;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease-in-out all;
+}
+.main-header__list.active {
+  opacity: 1;
+  visibility: visible;
+}
+.main-header__list a {
+  display: block;
+  margin-block: 1rem;
+}
+.main-header__ham {
+  width: 2rem;
+  aspect-ratio: 1;
+  background-image: url("../images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 /*# sourceMappingURL=main.css.map */

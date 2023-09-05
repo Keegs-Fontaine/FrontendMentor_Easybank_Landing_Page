@@ -1,0 +1,36 @@
+@use "../globals" as *
+
+.main-header
+    &__nav
+        @include flex()
+
+    &__list
+        width: 85vw
+        padding-block: 0.5rem
+        position: absolute
+        left: 50%
+        top: 20%
+        transform: translateX(-50%)
+        text-align: center
+        box-shadow: 0 0 0 100vmax rgb(0 0 0 / 0.15)
+        border-radius: 0.5rem
+
+        opacity: 0
+        visibility: hidden
+        transition: 0.2s ease-in-out all
+
+        &.active
+            opacity: 1
+            visibility: visible
+
+        a
+            display: block
+            margin-block: 1rem
+
+    &__ham
+        width: 2rem
+        aspect-ratio: 1
+        background-image: url("../images/icon-hamburger.svg")
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center

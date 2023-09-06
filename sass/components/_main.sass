@@ -1,7 +1,27 @@
 @use "../globals" as *
 
 .main
+    padding-top: 4rem
+    padding-bottom: 2rem
     background-color: $clr-neutral-800
 
     &__info
-        @include info-section()
+        @include info-section(2.25rem, 2.5rem)
+        margin-bottom: 4rem
+
+    &__reasons-list
+        article
+            @include flex(center, center, column)
+            margin-bottom: 1rem
+
+        &__img-container
+            width: 4rem
+            aspect-ratio: 1
+
+        &__info
+            @include info-section(1.25rem, 1.5rem, 0.9rem)
+            margin-top: 1.25rem
+
+    @include media()
+        &__reasons-list
+            @include flex(space-between, start)

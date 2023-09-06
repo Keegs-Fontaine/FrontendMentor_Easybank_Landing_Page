@@ -24,7 +24,7 @@ $max-page-width: 69.625rem
 $wrapper-inline-padding: 1rem
 
 // Mixins
-@mixin media($direction: "desktop", $size: 50em)
+@mixin media($size: 65em, $direction: "desktop")
     @if $direction == "desktop"
         @media screen and (min-width: $size)
             @content
@@ -50,15 +50,15 @@ $wrapper-inline-padding: 1rem
     &:hover
         opacity: 0.7
 
-@mixin info-section()
+@mixin info-section($size-mobile: 2.5rem, $size-desktop: 3rem, $paragraph-size: 1.1rem)
     padding-inline: $wrapper-inline-padding
     text-align: center
 
     > *
-        margin-bottom: 2rem
+        margin-bottom: 1.25rem
 
     .header
-        font-size: 2.5rem
+        font-size: $size-mobile
         font-weight: $fw-light
         color: $clr-prim-200
 
@@ -72,7 +72,7 @@ $wrapper-inline-padding: 1rem
         text-align: left
 
         .header
-            font-size: 3rem
+            font-size: $size-desktop
 
         .paragraph
-            font-size: 1.1rem
+            font-size: $paragraph-size

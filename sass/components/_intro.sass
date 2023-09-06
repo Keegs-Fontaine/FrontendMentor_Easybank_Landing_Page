@@ -1,45 +1,50 @@
 @use "../globals" as *
 
 .intro
+    padding-bottom: 3rem
+
     &__bg-container
         width: 100%
-        min-height: 17.5rem
-        position: relative
-        z-index: -1
+        position: absolute
+        top: 5%
         background-image: url("../images/bg-intro-mobile.svg")
         background-repeat: no-repeat
-        background-position: right top
+        background-size: 100% 22rem
 
         img
-            max-width: 30rem
-            display: block
+            max-width: 20rem
             margin-inline: auto
-            transform: translateY(-19%)
+            display: block
+            transform: translateY(-5.5rem)
 
     &__info
         @include info-section()
+        margin-top: 20rem
 
     &__cta
+        @include cta()
         display: block
         width: fit-content
         margin-inline: auto
-        @include cta()
 
     @include media()
-        @include flex(space-between, start, row-reverse)
+        @include flex(start, start, row-reverse)
         max-width: $max-page-width
         margin-inline: auto
 
         &__bg-container
-            min-width: 25rem
-            transform: translateX(15%)
+            width: 25rem
+            height: 20rem
+            top: 10%
+            right: 1%
+            transform: scale(1.8)
             background-image: url("../images/bg-intro-desktop.svg")
-            background-position: 5% bottom
-            background-size: 250%
+            background-size: contain
 
             img
-                max-width: 55rem
-                transform: translate(12%, -15%)
+                position: absolute
+                top: 35%
+                left: 13%
 
         &__cta
             margin-inline: unset

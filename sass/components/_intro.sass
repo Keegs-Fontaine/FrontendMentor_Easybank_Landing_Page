@@ -1,8 +1,46 @@
 @use "../globals" as *
 
 .intro
+    overflow: hidden
+
     &__bg-container
         width: 100%
         min-height: 17.5rem
+        position: relative
+        z-index: -1
         background-image: url("../images/bg-intro-mobile.svg")
         background-repeat: no-repeat
+        background-position: right top
+
+        img
+            max-width: 30rem
+            display: block
+            margin-inline: auto
+            transform: translateY(-19%)
+
+    &__info
+        padding-inline: 1.5rem
+        text-align: center
+
+        > *
+            margin-bottom: 2rem
+
+        h1
+            font-size: 2.5rem
+            font-weight: $fw-light
+            color: $clr-prim-200
+
+        p
+            color: $clr-neutral-600
+
+    &__cta
+        display: block
+        width: fit-content
+        margin-inline: auto
+        @include cta()
+
+    @include media()
+        @include flex(space-between, center, row-reverse)
+
+        &__bg-container
+            background-image: url("../images/bg-intro-desktop.svg")

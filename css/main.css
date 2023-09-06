@@ -117,11 +117,63 @@ html {
   }
 }
 
+.intro {
+  overflow: hidden;
+}
 .intro__bg-container {
   width: 100%;
   min-height: 17.5rem;
+  position: relative;
+  z-index: -1;
   background-image: url("../images/bg-intro-mobile.svg");
   background-repeat: no-repeat;
+  background-position: right top;
+}
+.intro__bg-container img {
+  max-width: 30rem;
+  display: block;
+  margin-inline: auto;
+  transform: translateY(-19%);
+}
+.intro__info {
+  padding-inline: 1.5rem;
+  text-align: center;
+}
+.intro__info > * {
+  margin-bottom: 2rem;
+}
+.intro__info h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: hsl(233deg, 26%, 24%);
+}
+.intro__info p {
+  color: hsl(233deg, 8%, 62%);
+}
+.intro__cta {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  padding-inline: 1.45rem;
+  padding-block: 0.75rem;
+  color: white;
+  background-image: linear-gradient(to left, hsl(192deg, 70%, 51%), hsl(136deg, 65%, 51%));
+  border-radius: 999rem;
+  transition: 0.2s ease-in-out opacity;
+}
+.intro__cta:hover {
+  opacity: 0.7;
+}
+@media screen and (min-width: 50em) {
+  .intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .intro__bg-container {
+    background-image: url("../images/bg-intro-desktop.svg");
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

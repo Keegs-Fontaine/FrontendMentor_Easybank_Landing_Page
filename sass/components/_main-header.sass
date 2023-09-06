@@ -2,6 +2,9 @@
 
 .main-header
     padding-block: 1rem
+    position: relative
+    z-index: 500
+    background-color: white
 
     &__nav
         @include flex()
@@ -14,7 +17,7 @@
         padding-block: 0.5rem
         position: absolute
         left: 50%
-        top: 20%
+        top: 8rem
         transform: translateX(-50%)
         text-align: center
         background-color: $clr-neutral-999

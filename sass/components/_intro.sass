@@ -1,8 +1,6 @@
 @use "../globals" as *
 
 .intro
-    overflow: hidden
-
     &__bg-container
         width: 100%
         min-height: 17.5rem
@@ -19,7 +17,7 @@
             transform: translateY(-19%)
 
     &__info
-        padding-inline: 1.5rem
+        padding-inline: $wrapper-inline-padding
         text-align: center
 
         > *
@@ -40,7 +38,31 @@
         @include cta()
 
     @include media()
-        @include flex(space-between, center, row-reverse)
+        @include flex(space-between, start, row-reverse)
+        max-width: $max-page-width
+        margin-inline: auto
 
         &__bg-container
+            transform: translateX(20%)
             background-image: url("../images/bg-intro-desktop.svg")
+            background-position: 10% -12rem
+            background-size: 225%
+
+            img
+                max-width: 45rem
+                transform: translate(12%, -15%)
+
+        &__info
+            margin-top: 7rem
+            max-width: 30rem
+            text-align: left
+
+            h1
+                font-size: 3rem
+
+            p
+                font-size: 1.1rem
+                line-height: 1.5
+
+        &__cta
+            margin-inline: unset

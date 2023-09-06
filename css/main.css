@@ -38,8 +38,15 @@ html {
   font-family: "Public Sans", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .main-header {
   padding-block: 1rem;
+  position: relative;
+  z-index: 500;
+  background-color: white;
 }
 .main-header__nav {
   display: flex;
@@ -55,7 +62,7 @@ html {
   padding-block: 0.5rem;
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: 8rem;
   transform: translateX(-50%);
   text-align: center;
   background-color: white;
@@ -118,9 +125,6 @@ html {
   }
 }
 
-.intro {
-  overflow: hidden;
-}
 .intro__bg-container {
   width: 100%;
   min-height: 17.5rem;
@@ -137,7 +141,7 @@ html {
   transform: translateY(-19%);
 }
 .intro__info {
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
   text-align: center;
 }
 .intro__info > * {
@@ -169,11 +173,35 @@ html {
   .intro {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     flex-direction: row-reverse;
+    max-width: 69.625rem;
+    margin-inline: auto;
   }
   .intro__bg-container {
+    transform: translateX(20%);
     background-image: url("../images/bg-intro-desktop.svg");
+    background-position: 10% -12rem;
+    background-size: 225%;
+  }
+  .intro__bg-container img {
+    max-width: 45rem;
+    transform: translate(12%, -15%);
+  }
+  .intro__info {
+    margin-top: 7rem;
+    max-width: 30rem;
+    text-align: left;
+  }
+  .intro__info h1 {
+    font-size: 3rem;
+  }
+  .intro__info p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  .intro__cta {
+    margin-inline: unset;
   }
 }
 

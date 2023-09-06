@@ -179,10 +179,11 @@ body {
     margin-inline: auto;
   }
   .intro__bg-container {
-    transform: translateX(20%);
+    min-width: 25rem;
+    transform: translateX(15%);
     background-image: url("../images/bg-intro-desktop.svg");
-    background-position: 10% -12rem;
-    background-size: 225%;
+    background-position: 8%;
+    background-size: 250%;
   }
   .intro__bg-container img {
     max-width: 45rem;

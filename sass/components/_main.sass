@@ -14,14 +14,13 @@
             @include flex(center, center, column)
             margin-bottom: 1rem
 
-        &__img-container
-            width: 4rem
-            aspect-ratio: 1
-
         &__info
             @include info-section(1.25rem, 1.5rem, 0.9rem)
             margin-top: 1.25rem
 
     @include media()
+        article
+            @include flex(flex-start, center, column)
+
         &__reasons-list
             @include flex(space-between, start)

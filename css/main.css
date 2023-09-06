@@ -42,7 +42,7 @@ html {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
   max-width: 69.625rem;
   margin-inline: auto;
 }
@@ -54,6 +54,7 @@ html {
   top: 20%;
   transform: translateX(-50%);
   text-align: center;
+  background-color: white;
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
   opacity: 0;

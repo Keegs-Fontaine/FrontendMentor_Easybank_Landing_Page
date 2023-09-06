@@ -1,8 +1,13 @@
 @use "../globals" as *
 
 .main-header
+    padding-block: 1rem
+
     &__nav
         @include flex()
+        padding-inline: 1.5rem
+        max-width: $max-page-width
+        margin-inline: auto
 
     &__list
         width: 85vw
@@ -27,6 +32,9 @@
             display: block
             margin-block: 1rem
 
+    &__cta
+        display: none
+
     &__ham
         width: 2rem
         aspect-ratio: 1
@@ -34,3 +42,24 @@
         background-repeat: no-repeat
         background-size: contain
         background-position: center
+
+        &.active
+            background-image: url("../images/icon-close.svg")
+            background-size: 75%
+
+    @include media()
+        &__list
+            all: unset
+            list-style-type: none
+            @include flex()
+            gap: 2rem
+
+            a
+                color: $clr-neutral-600
+
+        &__ham
+            display: none
+
+        &__cta
+            display: block
+            @include cta()

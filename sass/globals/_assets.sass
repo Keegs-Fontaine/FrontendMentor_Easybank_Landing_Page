@@ -57,7 +57,13 @@ $wrapper-inline-padding: 1rem
     font-size: $header-font-size
     color: $clr-prim-200
 
-@mixin paragraph-style($line-height, $font-size)
-    font-size: $font-size
+    @include media()
+        font-size: calc($header-font-size * 1.3)
+
+@mixin paragraph-style($line-height, $paragraph-font-size)
+    font-size: $paragraph-font-size
     line-height: $line-height
     color: $clr-neutral-600
+
+    @include media()
+        font-size: calc($paragraph-font-size * 1.1)

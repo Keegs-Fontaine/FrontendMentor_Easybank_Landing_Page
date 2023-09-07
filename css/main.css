@@ -171,6 +171,9 @@ body {
   }
 }
 
+.intro {
+  padding-bottom: 5.5rem;
+}
 .intro__bg-container {
   width: 100%;
   position: absolute;
@@ -198,10 +201,20 @@ body {
   font-size: 2.5rem;
   color: hsl(233deg, 26%, 24%);
 }
+@media screen and (min-width: 55em) {
+  .intro__info .header {
+    font-size: 3.25rem;
+  }
+}
 .intro__info .paragraph {
   font-size: 0.9rem;
-  line-height: 1.8;
+  line-height: 1.7;
   color: hsl(233deg, 8%, 62%);
+}
+@media screen and (min-width: 55em) {
+  .intro__info .paragraph {
+    font-size: 0.99rem;
+  }
 }
 .intro__cta {
   width: fit-content;
@@ -232,6 +245,98 @@ body {
   }
   .intro__cta {
     margin-inline: 0;
+  }
+}
+
+.main {
+  padding-block: 4.5rem;
+  background-color: hsl(220deg, 16%, 96%);
+}
+.main__info {
+  max-width: 35rem;
+  padding-bottom: 4rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.main__info > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.main__info .header {
+  font-size: 1.75rem;
+  color: hsl(233deg, 26%, 24%);
+}
+@media screen and (min-width: 55em) {
+  .main__info .header {
+    font-size: 2.275rem;
+  }
+}
+.main__info .paragraph {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: hsl(233deg, 8%, 62%);
+}
+@media screen and (min-width: 55em) {
+  .main__info .paragraph {
+    font-size: 0.99rem;
+  }
+}
+.main__reasons-list > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.main__reasons-list-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  max-width: 15rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.main__reasons-list-item .header {
+  font-size: 1rem;
+  color: hsl(233deg, 26%, 24%);
+  margin-block: 1rem;
+}
+@media screen and (min-width: 55em) {
+  .main__reasons-list-item .header {
+    font-size: 1.3rem;
+  }
+}
+.main__reasons-list-item .paragraph {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: hsl(233deg, 8%, 62%);
+}
+@media screen and (min-width: 55em) {
+  .main__reasons-list-item .paragraph {
+    font-size: 0.88rem;
+  }
+}
+.main__reasons-list-img-container {
+  width: 4rem;
+}
+@media screen and (min-width: 40em) {
+  .main__reasons-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 55em) {
+  .main__info {
+    text-align: left;
+    margin-inline: 0;
+  }
+  .main__reasons-list {
+    padding: 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+  .main__reasons-list-item {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    text-align: left;
   }
 }
 

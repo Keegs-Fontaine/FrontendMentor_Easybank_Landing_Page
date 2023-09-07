@@ -1,1 +1,56 @@
-@use "../globals"
+@use "../globals" as *
+
+.main
+    padding-block: 4.5rem
+    background-color: $clr-neutral-800
+
+    &__info
+        @include flow(1rem)
+        max-width: 35rem
+        padding-bottom: 4rem
+        margin-inline: auto
+        text-align: center
+
+        .header
+            @include header-style(1.75rem)
+
+        .paragraph
+            @include paragraph-style(1.7, 0.9rem)
+
+    &__reasons-list
+        @include flow(2rem)
+
+    &__reasons-list-item
+        @include flex(start, center, column)
+        max-width: 15rem
+        margin-inline: auto
+        text-align: center
+
+        .header
+            @include header-style(1rem)
+            margin-block: 1rem
+
+        .paragraph
+            @include paragraph-style(1.7, 0.8rem)
+
+    &__reasons-list-img-container
+        width: 4rem
+
+    @include media(40em)
+        &__reasons-list
+            display: grid
+            grid-template-columns: 1fr 1fr
+
+    @include media()
+        &__info
+            text-align: left
+            margin-inline: 0
+
+        &__reasons-list
+            padding: 0
+            grid-template-columns: repeat(4, 1fr)
+            gap: 3rem
+
+        &__reasons-list-item
+            @include flex(start, start, column)
+            text-align: left

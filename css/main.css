@@ -199,8 +199,9 @@ body {
   color: hsl(233deg, 26%, 24%);
 }
 .intro__info .paragraph {
-  color: hsl(233deg, 8%, 62%);
+  font-size: 0.9rem;
   line-height: 1.8;
+  color: hsl(233deg, 8%, 62%);
 }
 .intro__cta {
   width: fit-content;

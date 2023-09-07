@@ -52,3 +52,12 @@ $wrapper-inline-padding: 1rem
     &:hover,
     &:focus
         opacity: 0.7
+
+@mixin header-style($header-font-size)
+    font-size: $header-font-size
+    color: $clr-prim-200
+
+@mixin paragraph-style($line-height, $font-size)
+    font-size: $font-size
+    line-height: $line-height
+    color: $clr-neutral-600

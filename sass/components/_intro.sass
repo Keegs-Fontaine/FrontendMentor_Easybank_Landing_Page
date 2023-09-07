@@ -26,12 +26,10 @@ $info-margin-offset-desktop: 10rem
         text-align: center
 
         .header
-            font-size: 2.5rem
-            color: $clr-prim-200
+            @include header-style(2.5rem)
 
         .paragraph
-            color: $clr-neutral-600
-            line-height: 1.8
+            @include paragraph-style(1.8, 0.9rem)
 
     &__cta
         width: fit-content

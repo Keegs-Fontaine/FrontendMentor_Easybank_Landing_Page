@@ -37,3 +37,18 @@ $wrapper-inline-padding: 1rem
     justify-content: $jc
     align-items: $ai
     flex-direction: $fd
+
+@mixin flow($margin: 1rem, $condition: "none")
+    @if $condition == "unset"
+        > *:not(:last-child)
+            margin-bottom: 0
+    @else
+        > *:not(:last-child)
+            margin-bottom: $margin
+
+@mixin link-opacity()
+    transition: 0.2s ease-in-out opacity
+
+    &:hover,
+    &:focus
+        opacity: 0.7

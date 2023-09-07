@@ -1,3 +1,4 @@
+@use "./assets" as *
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap')
 
 html
@@ -9,4 +10,13 @@ body
 
 .wrapper
     max-width: 69.635rem
+    padding-inline: 1rem
     margin-inline: auto
+
+.cta-btn
+    @include link-opacity()
+    padding-inline: 2rem
+    padding-block: 0.75rem
+    color: $clr-neutral-999
+    background-image: linear-gradient(to right, $clr-prim-900, $clr-prim-500)
+    border-radius: 999rem

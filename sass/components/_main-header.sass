@@ -1,1 +1,99 @@
 @use "../globals" as *
+
+$link-top-value: 2.75rem
+
+.main-header
+    padding-block: 1rem
+
+    &__nav
+        @include flex()
+
+    &__logo
+        @include link-opacity()
+        // The logo naturally sits a little bit higher than supposed to. This offsets that
+        transform: translateY(0.23rem)
+
+    &__list
+        @include flow()
+        width: 85vw
+        max-width: 25rem
+        padding-block: 1rem
+        position: absolute
+        top: 15%
+        left: 50%
+        transform: translateX(-50%)
+        text-align: center
+        box-shadow: 0 0 0 100vmax rgb(25 25 25 / 0.15)
+
+        opacity: 0
+        visibility: hidden
+        transition: 0.2s ease-in-out all
+
+        &.active
+            opacity: 1
+            visibility: visible
+
+    &__cta
+        display: none
+
+    &__ham
+        width: 2rem
+        aspect-ratio: 1
+        background-image: url("../images/icon-hamburger.svg")
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+
+        &.active
+            background-image: url("../images/icon-close.svg")
+            background-size: 75%
+
+    @include media
+        &__list
+            @include flex()
+            @include flow(1rem, "unset")
+            width: unset
+            max-width: unset
+            padding: unset
+            position: unset
+            transform: unset
+            box-shadow: unset
+            opacity: unset
+            visibility: unset
+
+            > *
+                margin-inline: 1rem
+
+            li
+                position: relative
+
+            a
+                color: $clr-neutral-600
+                transition: 0.2s ease-in-out color
+
+                &:after
+                    content: ""
+                    width: 2.5rem
+                    height: 0.15rem
+                    position: absolute
+                    left: 50%
+                    top: $link-top-value
+                    transform: translateX(-50%)
+                    background-image: linear-gradient(to left, $clr-prim-900, $clr-prim-500)
+
+                    opacity: 0
+                    transition: 0.2s ease-in-out opacity
+
+                &:hover,
+                &:focus
+                    color: $clr-prim-200
+
+                &:hover:after,
+                &:focus:after
+                    opacity: 1
+
+        &__cta
+            display: block
+
+        &__ham
+            display: none

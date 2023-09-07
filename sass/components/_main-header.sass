@@ -1,9 +1,13 @@
 @use "../globals" as *
 
+$mobile-menu-top-value: 8rem
 $link-top-value: 2.75rem
 
 .main-header
     padding-block: 1rem
+    position: relative
+    z-index: 500
+    background-color: $clr-neutral-999
 
     &__nav
         @include flex()
@@ -17,13 +21,15 @@ $link-top-value: 2.75rem
         @include flow()
         width: 85vw
         max-width: 25rem
-        padding-block: 1rem
+        padding-block: 1.5rem
         position: absolute
-        top: 15%
+        top: $mobile-menu-top-value
         left: 50%
         transform: translateX(-50%)
+        background-color: $clr-neutral-999
         text-align: center
         box-shadow: 0 0 0 100vmax rgb(25 25 25 / 0.15)
+        border-radius: 0.5rem
 
         opacity: 0
         visibility: hidden

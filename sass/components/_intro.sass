@@ -1,50 +1,62 @@
 @use "../globals" as *
 
-.intro
-    padding-bottom: 3rem
+$info-margin-offset-mobile: 22rem
+$info-margin-offset-desktop: 10rem
 
+.intro
     &__bg-container
         width: 100%
         position: absolute
-        top: 5%
+        top: 0
+        left: 0
         background-image: url("../images/bg-intro-mobile.svg")
         background-repeat: no-repeat
-        background-size: 100% 22rem
+        background-size: 100% 100%
+        background-position: right top
 
         img
-            max-width: 20rem
-            margin-inline: auto
             display: block
-            transform: translateY(-5.5rem)
+            max-width: 25rem
+            margin-inline: auto
+            transform: translateY(-3.5rem)
 
     &__info
-        @include info-section()
-        margin-top: 20rem
+        @include flow()
+        margin-top: $info-margin-offset-mobile
+        text-align: center
+
+        .header
+            font-size: 2.5rem
+            color: $clr-prim-200
+
+        .paragraph
+            color: $clr-neutral-600
+            line-height: 1.8
 
     &__cta
-        @include cta()
-        display: block
         width: fit-content
         margin-inline: auto
+        display: block
 
     @include media()
-        @include flex(start, start, row-reverse)
-        max-width: $max-page-width
-        margin-inline: auto
-
         &__bg-container
-            width: 25rem
-            height: 20rem
-            top: 10%
-            right: 1%
-            transform: scale(1.8)
+            width: 40rem
+            left: 55%
+            top: -10%
             background-image: url("../images/bg-intro-desktop.svg")
-            background-size: contain
+            background-size: 150%
+            background-position-x: 15%
+            background-position-y: 25%
 
-        img
-            position: absolute
-            top: 35%
-            left: 13%
+            img
+                max-width: 40rem
+                transform: translate(12%, 4rem)
+
+        &__info
+            @include flow(1.8rem)
+            max-width: 25rem
+            margin-top: $info-margin-offset-desktop
+            text-align: left
 
         &__cta
-            margin-inline: unset
+            margin-inline: 0

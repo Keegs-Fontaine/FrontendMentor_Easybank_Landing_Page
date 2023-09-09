@@ -62,6 +62,7 @@ body {
 }
 
 .main-header {
+  width: 100vw;
   padding-block: 1rem;
   position: relative;
   z-index: 500;
@@ -91,7 +92,6 @@ body {
   background-color: white;
   text-align: center;
   box-shadow: 0 0 0 100vmax rgba(25, 25, 25, 0.15);
-  border-radius: 0.5rem;
   opacity: 0;
   visibility: hidden;
   transition: 0.2s ease-in-out all;
@@ -226,7 +226,7 @@ body {
   .intro__bg-container {
     width: 40rem;
     left: 55%;
-    top: -10%;
+    top: -4.5%;
     background-image: url("../images/bg-intro-desktop.svg");
     background-size: 150%;
     background-position-x: 15%;

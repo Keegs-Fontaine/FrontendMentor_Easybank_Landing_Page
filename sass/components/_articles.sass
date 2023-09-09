@@ -1,21 +1,17 @@
 @use "../globals" as *
 
 .articles
-    padding-block: 3rem
-    margin-inline: 1rem
+    padding-block: 7rem
     text-align: center
-    background-color: $clr-neutral-900
 
-    &__header
+    &__main-header
         margin-bottom: 2rem
         font-size: 2rem
         color: $clr-prim-200
 
     article
         max-width: 15rem
-        min-height: 27rem
-        margin-inline: auto
-        margin-bottom: 2rem
+        min-height: 25rem
         border-radius: 1rem 1rem 0 0
         background-color: $clr-neutral-999
 
@@ -25,22 +21,31 @@
             border-radius: inherit
 
     &__info
+        @include flow(1rem)
         padding: 1rem
         text-align: left
 
-        > *
-            margin-bottom: 1rem
+    &__author
+        font-size: 0.8rem
+        color: $clr-neutral-600
 
-        &__author
-            font-size: 0.8rem
-            color: $clr-neutral-600
+    &__header
+        @include header-style(0.9rem)
 
-        &__header
-            font-size: 1.1rem
+    &__paragraph
+        @include paragraph-style(1.5, 0.75rem)
 
-        &__paragraph
-            color: $clr-neutral-600
+        transition: 0.2s ease-in-out all
+
+        &:hover
+            color: $clr-prim-500
+            opacity: 0.7
+
+    @include media(40em)
+        &__list
+            display: grid
+            grid-template-columns: 1fr 1fr
 
     @include media()
         &__list
-            @include flex(space-between, start)
+            grid-template-columns: repeat(4, 1fr)

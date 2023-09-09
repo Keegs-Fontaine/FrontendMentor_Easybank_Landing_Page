@@ -1,4 +1,69 @@
 @use "../globals" as *
 
+$top-margin-spacing: 2rem
+$mobile-list-spacing: clamp(5rem, 12vw, 8rem)
+
 .footer
+    padding-block: 2rem
+    text-align: center
+    color: $clr-neutral-999
     background-color: $clr-prim-200
+
+    &__logo
+        @include link-opacity()
+        display: block
+        width: 12rem
+        margin-inline: auto
+        margin-bottom: $top-margin-spacing
+
+    &__social-links
+        @include flex(center)
+        gap: 1rem
+
+    &__main-links-container
+        margin-block: $top-margin-spacing
+
+    &__cta
+        width: fit-content
+        display: block
+        margin-inline: auto
+
+    &__cta,
+    &__copyright
+        margin-top: $top-margin-spacing
+
+    &__copyright
+        font-size: 0.8rem
+
+    &__main-links-container,
+    &__main-links
+        @include flow()
+
+    @include media()
+        text-align: left
+
+        &__nav
+            @include flex(left)
+
+        &__main-links-container
+            @include flex(space-between)
+            gap: $mobile-list-spacing
+            margin-left: $mobile-list-spacing
+            justify-self: center-start
+
+        &__cta-container
+            margin-left: auto
+
+        &__main-links-container
+            @include flow(0)
+
+        &__cta
+            margin-top: 0
+            margin-right: 0
+
+        li
+            transition: 0.2s ease-in-out all
+
+            &:hover
+                @include link-opacity()
+                color: $clr-prim-500

@@ -410,7 +410,8 @@ body {
 }
 
 .footer {
-  padding-block: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
   text-align: center;
   color: white;
   background-color: hsl(233deg, 26%, 24%);

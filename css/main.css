@@ -352,6 +352,7 @@ body {
 .articles article {
   max-width: 15rem;
   min-height: 25rem;
+  margin-inline: auto;
   border-radius: 1rem 1rem 0 0;
   background-color: white;
 }
@@ -405,6 +406,10 @@ body {
   .articles__list {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.footer {
+  background-color: hsl(233deg, 26%, 24%);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -39,6 +39,7 @@ html {
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -487,6 +488,25 @@ body {
   .footer li:hover:hover, .footer li:hover:focus {
     opacity: 0.7;
   }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: white;
+}
+.attribution a {
+  transition: 0.2s ease-in-out opacity;
+  color: lightblue;
+}
+.attribution a:hover, .attribution a:focus {
+  opacity: 0.7;
+}
+.attribution a:hover {
+  color: hsl(136deg, 65%, 51%);
 }
 
 /*# sourceMappingURL=main.css.map */

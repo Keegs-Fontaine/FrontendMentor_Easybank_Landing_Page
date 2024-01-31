@@ -54,7 +54,7 @@ body {
   padding-inline: 2rem;
   padding-block: 0.75rem;
   color: white;
-  background-image: linear-gradient(to right, hsl(192deg, 70%, 51%), hsl(136deg, 65%, 51%));
+  background-image: linear-gradient(to right, hsl(192, 70%, 51%), hsl(136, 65%, 51%));
   border-radius: 999rem;
 }
 .cta-btn:hover, .cta-btn:focus {
@@ -143,7 +143,7 @@ body {
     position: relative;
   }
   .main-header__list a {
-    color: hsl(233deg, 8%, 62%);
+    color: hsl(233, 8%, 62%);
     transition: 0.2s ease-in-out color;
   }
   .main-header__list a:after {
@@ -154,12 +154,12 @@ body {
     left: 50%;
     top: 2.75rem;
     transform: translateX(-50%);
-    background-image: linear-gradient(to left, hsl(192deg, 70%, 51%), hsl(136deg, 65%, 51%));
+    background-image: linear-gradient(to left, hsl(192, 70%, 51%), hsl(136, 65%, 51%));
     opacity: 0;
     transition: 0.2s ease-in-out opacity;
   }
   .main-header__list a:hover, .main-header__list a:focus {
-    color: hsl(233deg, 26%, 24%);
+    color: hsl(233, 26%, 24%);
   }
   .main-header__list a:hover:after, .main-header__list a:focus:after {
     opacity: 1;
@@ -200,7 +200,7 @@ body {
 }
 .intro__info .header {
   font-size: 2.5rem;
-  color: hsl(233deg, 26%, 24%);
+  color: hsl(233, 26%, 24%);
 }
 @media screen and (min-width: 55em) {
   .intro__info .header {
@@ -210,7 +210,7 @@ body {
 .intro__info .paragraph {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: hsl(233deg, 8%, 62%);
+  color: hsl(233, 8%, 62%);
 }
 @media screen and (min-width: 55em) {
   .intro__info .paragraph {
@@ -225,7 +225,7 @@ body {
 @media screen and (min-width: 55em) {
   .intro__bg-container {
     width: 40rem;
-    left: 55%;
+    left: 50%;
     top: -4.5%;
     background-image: url("../images/bg-intro-desktop.svg");
     background-size: 150%;
@@ -251,7 +251,7 @@ body {
 
 .main {
   padding-block: 4.5rem;
-  background-color: hsl(220deg, 16%, 96%);
+  background-color: hsl(220, 16%, 96%);
 }
 .main__info {
   max-width: 35rem;
@@ -264,7 +264,7 @@ body {
 }
 .main__info .header {
   font-size: 1.75rem;
-  color: hsl(233deg, 26%, 24%);
+  color: hsl(233, 26%, 24%);
 }
 @media screen and (min-width: 55em) {
   .main__info .header {
@@ -274,7 +274,7 @@ body {
 .main__info .paragraph {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: hsl(233deg, 8%, 62%);
+  color: hsl(233, 8%, 62%);
 }
 @media screen and (min-width: 55em) {
   .main__info .paragraph {
@@ -295,7 +295,7 @@ body {
 }
 .main__reasons-list-item .header {
   font-size: 1rem;
-  color: hsl(233deg, 26%, 24%);
+  color: hsl(233, 26%, 24%);
   margin-block: 1rem;
 }
 @media screen and (min-width: 55em) {
@@ -306,7 +306,7 @@ body {
 .main__reasons-list-item .paragraph {
   font-size: 0.8rem;
   line-height: 1.7;
-  color: hsl(233deg, 8%, 62%);
+  color: hsl(233, 8%, 62%);
 }
 @media screen and (min-width: 55em) {
   .main__reasons-list-item .paragraph {
@@ -348,7 +348,7 @@ body {
 .articles__main-header {
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: hsl(233deg, 26%, 24%);
+  color: hsl(233, 26%, 24%);
 }
 .articles article {
   max-width: 15rem;
@@ -371,11 +371,11 @@ body {
 }
 .articles__author {
   font-size: 0.8rem;
-  color: hsl(233deg, 8%, 62%);
+  color: hsl(233, 8%, 62%);
 }
 .articles__header {
   font-size: 0.9rem;
-  color: hsl(233deg, 26%, 24%);
+  color: hsl(233, 26%, 24%);
 }
 @media screen and (min-width: 55em) {
   .articles__header {
@@ -385,7 +385,7 @@ body {
 .articles__paragraph {
   font-size: 0.75rem;
   line-height: 1.5;
-  color: hsl(233deg, 8%, 62%);
+  color: hsl(233, 8%, 62%);
   transition: 0.2s ease-in-out all;
 }
 @media screen and (min-width: 55em) {
@@ -394,7 +394,7 @@ body {
   }
 }
 .articles__paragraph:hover {
-  color: hsl(136deg, 65%, 51%);
+  color: hsl(136, 65%, 51%);
   opacity: 0.7;
 }
 @media screen and (min-width: 40em) {
@@ -414,7 +414,7 @@ body {
   padding-bottom: 4rem;
   text-align: center;
   color: white;
-  background-color: hsl(233deg, 26%, 24%);
+  background-color: hsl(233, 26%, 24%);
 }
 .footer__logo {
   transition: 0.2s ease-in-out opacity;
@@ -484,7 +484,7 @@ body {
   }
   .footer li:hover {
     transition: 0.2s ease-in-out opacity;
-    color: hsl(136deg, 65%, 51%);
+    color: hsl(136, 65%, 51%);
   }
   .footer li:hover:hover, .footer li:hover:focus {
     opacity: 0.7;
@@ -507,7 +507,7 @@ body {
   opacity: 0.7;
 }
 .attribution a:hover {
-  color: hsl(136deg, 65%, 51%);
+  color: hsl(136, 65%, 51%);
 }
 
 /*# sourceMappingURL=main.css.map */
